@@ -52,6 +52,12 @@ const PERMITTABLE_TOKENS: {
   [42]: {
     [UNI[42].address]: { type: PermitType.AMOUNT, name: 'Uniswap' },
   },
+  [3603102]: {
+    ['0xefF791781FC8E9d44b0C55D0b10065c998760211']: { type: PermitType.AMOUNT, name: 'USD Tether', version: '2' },
+    ['0xABf335F73bfA454A6AA498e09266dac9e44FD9C7']: { type: PermitType.AMOUNT, name: 'Uniswap' },
+    ['0xC1b3702B8B2778cD8315EfD40ca6C1ADDF094C80']: { type: PermitType.AMOUNT, name: 'Helo', version: '2' },
+    ['0xE81ea1352D1cbE9177B6C8e385e8CFd3422dF015']: { type: PermitType.AMOUNT, name: 'Blocktree' },
+  },
 }
 
 export enum UseERC20PermitState {
