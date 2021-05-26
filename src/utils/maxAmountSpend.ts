@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount } from '@blocktree/uniswap-sdk-core'
 import JSBI from 'jsbi'
 import { MIN_ETH } from '../constants/misc'
 

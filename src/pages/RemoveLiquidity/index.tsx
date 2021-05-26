@@ -1,6 +1,6 @@
 import { Contract } from '@ethersproject/contracts'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, Percent, WETH9 } from '@uniswap/sdk-core'
+import { Currency, Percent, WETH9 } from '@blocktree/uniswap-sdk-core'
 import React, { useCallback, useContext, useMemo, useState } from 'react'
 import { ArrowDown, Plus } from 'react-feather'
 import ReactGA from 'react-ga'
@@ -79,8 +79,8 @@ export default function RemoveLiquidity({
     [Field.LIQUIDITY_PERCENT]: parsedAmounts[Field.LIQUIDITY_PERCENT].equalTo('0')
       ? '0'
       : parsedAmounts[Field.LIQUIDITY_PERCENT].lessThan(new Percent('1', '100'))
-      ? '<1'
-      : parsedAmounts[Field.LIQUIDITY_PERCENT].toFixed(0),
+        ? '<1'
+        : parsedAmounts[Field.LIQUIDITY_PERCENT].toFixed(0),
     [Field.LIQUIDITY]:
       independentField === Field.LIQUIDITY ? typedValue : parsedAmounts[Field.LIQUIDITY]?.toSignificant(6) ?? '',
     [Field.CURRENCY_A]:
@@ -371,9 +371,8 @@ export default function RemoveLiquidity({
     )
   }
 
-  const pendingText = `Removing ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} ${
-    currencyA?.symbol
-  } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} ${currencyB?.symbol}`
+  const pendingText = `Removing ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} ${currencyA?.symbol
+    } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} ${currencyB?.symbol}`
 
   const liquidityPercentChangeCallback = useCallback(
     (value: number) => {
@@ -523,17 +522,15 @@ export default function RemoveLiquidity({
                       <RowBetween style={{ justifyContent: 'flex-end' }}>
                         {oneCurrencyIsETH ? (
                           <StyledInternalLink
-                            to={`/remove/v2/${currencyA?.isNative ? WETH9[chainId].address : currencyIdA}/${
-                              currencyB?.isNative ? WETH9[chainId].address : currencyIdB
-                            }`}
+                            to={`/remove/v2/${currencyA?.isNative ? WETH9[chainId].address : currencyIdA}/${currencyB?.isNative ? WETH9[chainId].address : currencyIdB
+                              }`}
                           >
                             Receive WETH
                           </StyledInternalLink>
                         ) : oneCurrencyIsWETH ? (
                           <StyledInternalLink
-                            to={`/remove/v2/${currencyA?.equals(WETH9[chainId]) ? 'ETH' : currencyIdA}/${
-                              currencyB?.equals(WETH9[chainId]) ? 'ETH' : currencyIdB
-                            }`}
+                            to={`/remove/v2/${currencyA?.equals(WETH9[chainId]) ? 'ETH' : currencyIdA}/${currencyB?.equals(WETH9[chainId]) ? 'ETH' : currencyIdB
+                              }`}
                           >
                             Receive ETH
                           </StyledInternalLink>

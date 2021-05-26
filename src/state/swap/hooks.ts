@@ -1,10 +1,10 @@
 import JSBI from 'jsbi'
-import { Trade as V3Trade } from '@uniswap/v3-sdk'
+import { Trade as V3Trade } from '@blocktree/uniswap-v3-sdk'
 import { useBestV3TradeExactIn, useBestV3TradeExactOut, V3TradeState } from '../../hooks/useBestV3Trade'
 import useENS from '../../hooks/useENS'
 import { parseUnits } from '@ethersproject/units'
-import { Currency, CurrencyAmount, Percent, TradeType } from '@uniswap/sdk-core'
-import { Trade as V2Trade } from '@uniswap/v2-sdk'
+import { Currency, CurrencyAmount, Percent, TradeType } from '@blocktree/uniswap-sdk-core'
+import { Trade as V2Trade } from '@blocktree/uniswap-v2-sdk'
 import { ParsedQs } from 'qs'
 import { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -105,9 +105,9 @@ function involvesAddress(
 ): boolean {
   const path = trade instanceof V2Trade ? trade.route.path : trade.route.tokenPath
   return (
-    path.some((token) => token.address === checksummedAddress) ||
+    path.some((token: { address: string }) => token.address === checksummedAddress) ||
     (trade instanceof V2Trade
-      ? trade.route.pairs.some((pair) => pair.liquidityToken.address === checksummedAddress)
+      ? trade.route.pairs.some((pair: { liquidityToken: { address: string } }) => pair.liquidityToken.address === checksummedAddress)
       : false)
   )
 }

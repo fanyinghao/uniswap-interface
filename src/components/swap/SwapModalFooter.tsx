@@ -1,6 +1,6 @@
-import { Currency, TradeType } from '@uniswap/sdk-core'
-import { Trade as V2Trade } from '@uniswap/v2-sdk'
-import { Trade as V3Trade } from '@uniswap/v3-sdk'
+import { Currency, TradeType } from '@blocktree/uniswap-sdk-core'
+import { Trade as V2Trade } from '@blocktree/uniswap-v2-sdk'
+import { Trade as V3Trade } from '@blocktree/uniswap-v3-sdk'
 
 import React from 'react'
 import { Text } from 'rebass'

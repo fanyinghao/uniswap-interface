@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useMemo, useState } from 'react'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, CurrencyAmount, Percent } from '@uniswap/sdk-core'
-import { WETH9 } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount, Percent } from '@blocktree/uniswap-sdk-core'
+import { WETH9 } from '@blocktree/uniswap-sdk-core'
 import { AlertTriangle, AlertCircle } from 'react-feather'
 import ReactGA from 'react-ga'
 import { ZERO_PERCENT } from '../../constants/misc'
@@ -45,7 +45,7 @@ import {
   useRangeHopCallbacks,
   useV3DerivedMintInfo,
 } from 'state/mint/v3/hooks'
-import { FeeAmount, NonfungiblePositionManager } from '@uniswap/v3-sdk'
+import { FeeAmount, NonfungiblePositionManager } from '@blocktree/uniswap-v3-sdk'
 import { useV3PositionFromTokenId } from 'hooks/useV3Positions'
 import { useDerivedPositionInfo } from 'hooks/useDerivedPositionInfo'
 import { PositionPreview } from 'components/PositionPreview'
@@ -200,18 +200,18 @@ export default function AddLiquidity({
       const { calldata, value } =
         hasExistingPosition && tokenId
           ? NonfungiblePositionManager.addCallParameters(position, {
-              tokenId,
-              slippageTolerance: allowedSlippage,
-              deadline: deadline.toString(),
-              useNative,
-            })
+            tokenId,
+            slippageTolerance: allowedSlippage,
+            deadline: deadline.toString(),
+            useNative,
+          })
           : NonfungiblePositionManager.addCallParameters(position, {
-              slippageTolerance: allowedSlippage,
-              recipient: account,
-              deadline: deadline.toString(),
-              useNative,
-              createPool: noLiquidity,
-            })
+            slippageTolerance: allowedSlippage,
+            recipient: account,
+            deadline: deadline.toString(),
+            useNative,
+            createPool: noLiquidity,
+          })
 
       let txn: { to: string; data: string; value: string } = {
         to: NONFUNGIBLE_POSITION_MANAGER_ADDRESSES[chainId],
@@ -285,11 +285,9 @@ export default function AddLiquidity({
     }
   }
 
-  const pendingText = `Supplying ${!depositADisabled ? parsedAmounts[Field.CURRENCY_A]?.toSignificant(6) : ''} ${
-    !depositADisabled ? currencies[Field.CURRENCY_A]?.symbol : ''
-  } ${!outOfRange ? 'and' : ''} ${!depositBDisabled ? parsedAmounts[Field.CURRENCY_B]?.toSignificant(6) : ''} ${
-    !depositBDisabled ? currencies[Field.CURRENCY_B]?.symbol : ''
-  }`
+  const pendingText = `Supplying ${!depositADisabled ? parsedAmounts[Field.CURRENCY_A]?.toSignificant(6) : ''} ${!depositADisabled ? currencies[Field.CURRENCY_A]?.symbol : ''
+    } ${!outOfRange ? 'and' : ''} ${!depositBDisabled ? parsedAmounts[Field.CURRENCY_B]?.toSignificant(6) : ''} ${!depositBDisabled ? currencies[Field.CURRENCY_B]?.symbol : ''
+    }`
 
   const handleCurrencySelect = useCallback(
     (currencyNew: Currency, currencyIdOther?: string): (string | undefined)[] => {
@@ -493,8 +491,7 @@ export default function AddLiquidity({
                               onLeftRangeInput('')
                               onRightRangeInput('')
                               history.push(
-                                `/add/${currencyIdB as string}/${currencyIdA as string}${
-                                  feeAmount ? '/' + feeAmount : ''
+                                `/add/${currencyIdB as string}/${currencyIdA as string}${feeAmount ? '/' + feeAmount : ''
                                 }`
                               )
                             }}

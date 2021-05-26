@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, CurrencyAmount, Percent, WETH9 } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount, Percent, WETH9 } from '@blocktree/uniswap-sdk-core'
 import React, { useCallback, useContext, useState } from 'react'
 import { Plus } from 'react-feather'
 import ReactGA from 'react-ga'
@@ -268,9 +268,8 @@ export default function AddLiquidity({
     )
   }
 
-  const pendingText = `Supplying ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} ${
-    currencies[Field.CURRENCY_A]?.symbol
-  } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} ${currencies[Field.CURRENCY_B]?.symbol}`
+  const pendingText = `Supplying ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} ${currencies[Field.CURRENCY_A]?.symbol
+    } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} ${currencies[Field.CURRENCY_B]?.symbol}`
 
   const handleCurrencyASelect = useCallback(
     (currencyA: Currency) => {

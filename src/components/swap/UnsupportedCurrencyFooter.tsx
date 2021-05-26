@@ -8,7 +8,7 @@ import { RowBetween, AutoRow } from 'components/Row'
 import { AutoColumn } from 'components/Column'
 import CurrencyLogo from 'components/CurrencyLogo'
 import { useActiveWeb3React } from 'hooks/web3'
-import { Currency, Token } from '@uniswap/sdk-core'
+import { Currency, Token } from '@blocktree/uniswap-sdk-core'
 import { useUnsupportedTokens } from '../../hooks/Tokens'
 import { ExplorerDataType, getExplorerLink } from '../../utils/getExplorerLink'
 
@@ -50,8 +50,8 @@ export default function UnsupportedCurrencyFooter({
   const tokens =
     chainId && currencies
       ? currencies.map((currency) => {
-          return currency?.wrapped
-        })
+        return currency?.wrapped
+      })
       : []
 
   const unsupportedTokens: { [address: string]: Token } = useUnsupportedTokens()

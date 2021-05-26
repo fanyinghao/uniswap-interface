@@ -22,13 +22,13 @@ import ReactGA from 'react-ga'
 import { useActiveWeb3React } from 'hooks/web3'
 import { TransactionResponse } from '@ethersproject/providers'
 import { useTransactionAdder } from 'state/transactions/hooks'
-import { Percent, WETH9 } from '@uniswap/sdk-core'
+import { Percent, WETH9 } from '@blocktree/uniswap-sdk-core'
 import { TYPE } from 'theme'
 import { Wrapper, SmallMaxButton, ResponsiveHeaderText } from './styled'
 import Loader from 'components/Loader'
 import DoubleCurrencyLogo from 'components/DoubleLogo'
 import { Break } from 'components/earn/styled'
-import { NonfungiblePositionManager } from '@uniswap/v3-sdk'
+import { NonfungiblePositionManager } from '@blocktree/uniswap-v3-sdk'
 import useTheme from 'hooks/useTheme'
 import { AddRemoveTabs } from 'components/NavigationTabs'
 import RangeBadge from 'components/Badge/RangeBadge'
@@ -186,9 +186,8 @@ function Remove({ tokenId }: { tokenId: BigNumber }) {
     setTxnHash('')
   }, [onPercentSelectForSlider, txnHash])
 
-  const pendingText = `Removing ${liquidityValue0?.toSignificant(6)} ${
-    liquidityValue0?.currency?.symbol
-  } and ${liquidityValue1?.toSignificant(6)} ${liquidityValue1?.currency?.symbol}`
+  const pendingText = `Removing ${liquidityValue0?.toSignificant(6)} ${liquidityValue0?.currency?.symbol
+    } and ${liquidityValue1?.toSignificant(6)} ${liquidityValue1?.currency?.symbol}`
 
   function modalHeader() {
     return (
@@ -370,11 +369,11 @@ function Remove({ tokenId }: { tokenId: BigNumber }) {
               </LightCard>
 
               {liquidityValue0?.currency &&
-              liquidityValue1?.currency &&
-              (liquidityValue0.currency.isNative ||
-                liquidityValue1.currency.isNative ||
-                liquidityValue0.currency.wrapped.equals(WETH9[liquidityValue0.currency.chainId]) ||
-                liquidityValue1.currency.wrapped.equals(WETH9[liquidityValue1.currency.chainId])) ? (
+                liquidityValue1?.currency &&
+                (liquidityValue0.currency.isNative ||
+                  liquidityValue1.currency.isNative ||
+                  liquidityValue0.currency.wrapped.equals(WETH9[liquidityValue0.currency.chainId]) ||
+                  liquidityValue1.currency.wrapped.equals(WETH9[liquidityValue1.currency.chainId])) ? (
                 <RowBetween>
                   <TYPE.main>Collect as WETH</TYPE.main>
                   <Toggle
