@@ -1,9 +1,9 @@
 import { FACTORY_ADDRESS as V3_FACTORY_ADDRESS } from '@blocktree/uniswap-v3-sdk'
 import { constructSameAddressMap } from '../utils/constructSameAddressMap'
 
-export const UNI_ADDRESS = constructSameAddressMap('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984')
-export const MULTICALL2_ADDRESSES = constructSameAddressMap('0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696')
-export const V2_ROUTER_ADDRESS = constructSameAddressMap('0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D')
+export const UNI_ADDRESS = constructSameAddressMap('0xABf335F73bfA454A6AA498e09266dac9e44FD9C7')
+export const MULTICALL2_ADDRESSES = constructSameAddressMap('0x58D50058fA83f81301E64959792cE144ab9446dc')
+export const V2_ROUTER_ADDRESS = constructSameAddressMap('0x59562AcCE01eEE481a5fDFbD45FC50adfD4538d7')
 export const GOVERNANCE_ADDRESS = constructSameAddressMap('0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F')
 export const TIMELOCK_ADDRESS = constructSameAddressMap('0x1a9C8182C09F50C8318d769245beA52c32BE35BC')
 export const MERKLE_DISTRIBUTOR_ADDRESS: { [chainId: number]: string } = {

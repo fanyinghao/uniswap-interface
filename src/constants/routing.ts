@@ -36,6 +36,7 @@ const WETH_ONLY: ChainTokenList = {
   [4]: [WETH9[4]],
   [5]: [WETH9[5]],
   [42]: [WETH9[42]],
+  [3603102]: [WETH9[3603102]],
 }
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
@@ -76,6 +77,7 @@ export const COMMON_BASES: ChainCurrencyList = {
   [4]: [Ether.onChain(4), WETH9[4]],
   [5]: [Ether.onChain(5), WETH9[5]],
   [42]: [Ether.onChain(42), WETH9[42]],
+  [3603102]: [Ether.onChain(3603102), WETH9[3603102]],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -92,4 +94,9 @@ export const PINNED_PAIRS: { readonly [chainId: number]: [Token, Token][] } = {
     [USDC, USDT],
     [DAI, USDT],
   ],
+  [3603102]: [
+    [
+      WETH9[3603102], UNI[3603102]
+    ]
+  ]
 }
