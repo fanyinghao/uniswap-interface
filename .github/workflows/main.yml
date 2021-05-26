@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - deploy
+      - dex
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
