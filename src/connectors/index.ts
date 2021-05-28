@@ -28,7 +28,7 @@ const NETWORK_URLS: {
   [42]: `https://kovan.infura.io/v3/${INFURA_KEY}`,
 }
 
-const SUPPORTED_CHAIN_IDS = [1, 4, 3, 42, 5, 3603102]
+const SUPPORTED_CHAIN_IDS = [3603102]
 
 export const network = new NetworkConnector({
   urls: NETWORK_URLS,
