@@ -5,7 +5,7 @@
   "private": true,
   "devDependencies": {
     "@blocktree/uniswap-v2-sdk": "^3.0.0-alpha.5",
-    "@blocktree/uniswap-v3-sdk": "^3.0.0-alpha.11",
+    "@blocktree/uniswap-v3-sdk": "^3.0.0-alpha.12",
     "@blocktree/uniswap-sdk-core": "^3.0.0-alpha.4",
     "@emotion/core": "^11.0.0",
     "@ethersproject/experimental": "^5.2.0",

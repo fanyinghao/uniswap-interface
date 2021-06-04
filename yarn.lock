@@ -1366,10 +1366,10 @@
     tiny-invariant "^1.1.0"
     tiny-warning "^1.0.3"
 
-"@blocktree/uniswap-v3-sdk@^3.0.0-alpha.11":
-  version "3.0.0-alpha.11"
-  resolved "https://registry.npmjs.org/@blocktree/uniswap-v3-sdk/-/uniswap-v3-sdk-3.0.0-alpha.11.tgz#dca9c759b427123f55323a958efa35ae3bfd2d17"
-  integrity sha512-NQ5xf9UuesczZIn9Mxo2qk0JGRT8u6JyuTMLsZGq6krwfUSbvBGzNbA6vbmahlzbM6EVt9sMLJaGsXAgz7q+BA==
+"@blocktree/uniswap-v3-sdk@^3.0.0-alpha.12":
+  version "3.0.0-alpha.12"
+  resolved "https://registry.npmjs.org/@blocktree/uniswap-v3-sdk/-/uniswap-v3-sdk-3.0.0-alpha.12.tgz#5ac847e48ebc3990356bd94e3b81c6ac09e56538"
+  integrity sha512-cPfoAiGAQoWSN4jXH/3apfDyM0Nj8MkZPgt7hyoxKZ63RgXxj6mnxk/ZL26eLnv7ESTVZajSFUeIgEwjFNsA8g==
   dependencies:
     "@blocktree/uniswap-sdk-core" "^3.0.0-alpha.4"
     "@ethersproject/abi" "^5.0.12"
