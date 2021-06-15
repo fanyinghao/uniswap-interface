@@ -1343,10 +1343,10 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@blocktree/uniswap-sdk-core@^3.0.0-alpha.4":
-  version "3.0.0-alpha.4"
-  resolved "https://registry.npmjs.org/@blocktree/uniswap-sdk-core/-/uniswap-sdk-core-3.0.0-alpha.4.tgz#7446f0b16a9317ed072f1e5a692f41adce9bcf5d"
-  integrity sha512-Yf2gF1hPAKMmARmkkoQEXFgVYb6ldAzjiqcrSUd1HFy1XbbgmmL2VdoVALWXzKxzqcqLGu9oD//f0RZeeYXDGA==
+"@blocktree/uniswap-sdk-core@^3.0.0-alpha.5":
+  version "3.0.0-alpha.5"
+  resolved "https://registry.npmjs.org/@blocktree/uniswap-sdk-core/-/uniswap-sdk-core-3.0.0-alpha.5.tgz#e5bd550637f659a750a7de64149996951741d052"
+  integrity sha512-0W2WPeN7yi9+EaoIyLR3YcFghK2I8vZLX0gIC1MpNoUIbatryXNeF9Dhc1SP7eFaF+09bPzuHTLZQ/HVGizuwA==
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"
@@ -1355,23 +1355,23 @@
     tiny-invariant "^1.1.0"
     toformat "^2.0.0"
 
-"@blocktree/uniswap-v2-sdk@^3.0.0-alpha.5":
-  version "3.0.0-alpha.5"
-  resolved "https://registry.npmjs.org/@blocktree/uniswap-v2-sdk/-/uniswap-v2-sdk-3.0.0-alpha.5.tgz#a00f6c8c99b1431a2367271a54084828a445cfc6"
-  integrity sha512-HEgA7M8te//RySYH1Q1Nq1U412axAUmBGghx8ZbRLChOF38OAco06UJX9m1d5lqSEIeQ3jNFUEw8L6M/n0VloA==
+"@blocktree/uniswap-v2-sdk@^3.0.0-alpha.6":
+  version "3.0.0-alpha.6"
+  resolved "https://registry.npmjs.org/@blocktree/uniswap-v2-sdk/-/uniswap-v2-sdk-3.0.0-alpha.6.tgz#81bcb546d2f4d291ec561d9727e716dfaf7a9530"
+  integrity sha512-atdJ2bw3/12XaQWFXBGFxP9bb1VDsyfFsdIxDXbLvY4kjBs+jeibBQ+L7oRmb9/8uKNByIEk1UJ0hW84zemQcw==
   dependencies:
-    "@blocktree/uniswap-sdk-core" "^3.0.0-alpha.4"
+    "@blocktree/uniswap-sdk-core" "^3.0.0-alpha.5"
     "@ethersproject/address" "^5.0.0"
     "@ethersproject/solidity" "^5.0.0"
     tiny-invariant "^1.1.0"
     tiny-warning "^1.0.3"
 
-"@blocktree/uniswap-v3-sdk@^3.0.0-alpha.12":
-  version "3.0.0-alpha.12"
-  resolved "https://registry.npmjs.org/@blocktree/uniswap-v3-sdk/-/uniswap-v3-sdk-3.0.0-alpha.12.tgz#5ac847e48ebc3990356bd94e3b81c6ac09e56538"
-  integrity sha512-cPfoAiGAQoWSN4jXH/3apfDyM0Nj8MkZPgt7hyoxKZ63RgXxj6mnxk/ZL26eLnv7ESTVZajSFUeIgEwjFNsA8g==
+"@blocktree/uniswap-v3-sdk@^3.0.0-alpha.13":
+  version "3.0.0-alpha.13"
+  resolved "https://registry.npmjs.org/@blocktree/uniswap-v3-sdk/-/uniswap-v3-sdk-3.0.0-alpha.13.tgz#43d614b1b1ebf8b4a2c2c0efdb99a96ebe18d38d"
+  integrity sha512-+g/Fa6hWdWJ6x/u5QPQiVfyN9irl8awC8IWqBkkEkjqxoWlLJVBgwvX4jh+v540g++vUsBfVX8bj7RK3gLPGsg==
   dependencies:
-    "@blocktree/uniswap-sdk-core" "^3.0.0-alpha.4"
+    "@blocktree/uniswap-sdk-core" "^3.0.0-alpha.5"
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/solidity" "^5.0.9"
     "@uniswap/v3-periphery" "1.0.0"

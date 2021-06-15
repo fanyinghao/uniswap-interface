@@ -251,8 +251,8 @@ export function queryParametersToSwapState(parsedQs: ParsedQs): SwapState {
   let inputCurrency = parseCurrencyFromURLParameter(parsedQs.inputCurrency)
   let outputCurrency = parseCurrencyFromURLParameter(parsedQs.outputCurrency)
   if (inputCurrency === '' && outputCurrency === '') {
-    // default to ETH input
-    inputCurrency = 'ETH'
+    // default to DEX input
+    inputCurrency = 'DEX'
   } else if (inputCurrency === outputCurrency) {
     // clear output if identical
     outputCurrency = ''
